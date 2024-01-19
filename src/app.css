@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --primary-green: #536437;
+  --light-cream: #fffcf5;
+  --mid-cream: #f9ecd9;
+  --dark-cream: #f9d7a7;
+  --brown-grey: #b7aaa2;
+  --dark-brown: #372a1f;
+  /* Font configs */
+  --paragraph: 16px;
+}
+
+.primary-green {
+  color: var(--primary-green);
+}
+.light-cream {
+  color: var(--light-cream);
+}
+.mid-cream {
+  color: var(--mid-cream);
+}
+.dark-cream {
+  color: var(--dark-cream);
+}
+.dark-brown {
+  color: var(--dark-brown);
+}
+
+h1 {
+  font-family: "Kalnia", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Lato", Arial;
+  font-size: var(--paragraph);
+}
+
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+}
+
+/* Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px) {
+}
