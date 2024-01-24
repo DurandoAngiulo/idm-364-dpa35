@@ -1,2 +1,25 @@
-<h1 class="text-3xl text-red-400">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Hero from "$lib/Hero.svelte";
+  import HeaderNav from "$lib/HeaderNav.svelte";
+  import PlantCard from "../lib/PlantCard.svelte";
+  import MissionStatement from "../lib/MissionStatement.svelte";
+  import Footer from "../lib/Footer.svelte";
+</script>
+
+<Hero />
+<HeaderNav />
+<div class="flex flex-wrap justify-center mb-10">
+  <div class="flex flex-wrap justify-center xl:w-9/12">
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+    <PlantCard />
+  </div>
+</div>
+<MissionStatement />
+<Footer />

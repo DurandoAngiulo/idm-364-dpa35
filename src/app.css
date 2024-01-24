@@ -9,9 +9,15 @@
   --mid-cream: #f9ecd9;
   --dark-cream: #f9d7a7;
   --brown-grey: #b7aaa2;
-  --dark-brown: #372a1f;
+  --dark-brown: #533419;
   /* Font configs */
+  --h1-text: 50px;
+  --h2-text: 15px;
+  --h3-text: 16px;
   --paragraph: 16px;
+
+  /* global margins & padding */
+  --body-margin: 10px 20px;
 }
 
 .primary-green {
@@ -23,31 +29,87 @@
 .mid-cream {
   color: var(--mid-cream);
 }
+.mid-cream-bg {
+  background-color: var(--mid-cream);
+}
 .dark-cream {
   color: var(--dark-cream);
+}
+.dark-cream-bg {
+  background-color: var(--dark-cream);
+}
+.brown-grey {
+  color: var(--brown-grey);
+}
+.brown-grey-bg {
+  background-color: var(--brown-grey);
 }
 .dark-brown {
   color: var(--dark-brown);
 }
 
-h1 {
-  font-family: "Kalnia", sans-serif;
-  font-weight: 600;
+body {
+  background-color: var(--light-cream);
+  margin: var(--body-margin);
 }
 
+h1 {
+  font-family: "Kalnia", sans-serif;
+  font-weight: 500;
+  color: var(--dark-brown);
+  font-size: var(--h1-text);
+}
+h2 {
+  font-family: "Kalnia", sans-serif;
+  font-weight: 500;
+  color: var(--dark-brown);
+  font-size: var(--h2-text);
+}
+
+h3 {
+  font-family: "Lato", Arial;
+  font-weight: 700;
+  color: var(--dark-brown);
+  font-size: var(--h3-text);
+}
 p {
   font-family: "Lato", Arial;
   font-size: var(--paragraph);
+  color: var(--dark-brown);
+}
+
+input {
+  all: initial;
+}
+button {
+  all: initial;
+  font-family: "Lato", Arial;
+  color: var(--light-cream);
+  background-color: var(--primary-green);
 }
 
 /* Mobile View */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 640px) {
 }
 
 /* Tablet View */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  :root {
+    --h2-text: 25px;
+  }
 }
 
 /* Desktop View */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --body-margin: 10px 30px;
+    --h2-text: 30px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
+  :root {
+    --body-margin: 10px 100px;
+    --h2-text: 30px;
+  }
 }
