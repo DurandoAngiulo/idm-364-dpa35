@@ -8,8 +8,8 @@
 </script>
 
 <div class="heroBackground rounded-md px-3 pt-3 flex flex-wrap content-between">
-  <div class="">
-    <h1 class="font-normal block sm:w-9/12 md:w-7/12 lg:w-5/12">
+  <div class="xl:w-9/12">
+    <h1 class="font-normal block sm:w-9/12 md:w-7/12 lg:w-5/12 xl:w-5/12">
       Find Your Dream <span class="primary-green font-semibold">Succulent</span>
     </h1>
     <p class="italic text-xl block sm:w-9/12 md:w-6/12 lg:w-4/12">

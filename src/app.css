@@ -26,6 +26,9 @@
 .light-cream {
   color: var(--light-cream);
 }
+.light-cream-bg {
+  background-color: var(--light-cream);
+}
 .mid-cream {
   color: var(--mid-cream);
 }

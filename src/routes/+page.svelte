@@ -3,7 +3,6 @@
   import HeaderNav from "$lib/HeaderNav.svelte";
   import PlantCard from "../lib/PlantCard.svelte";
   import MissionStatement from "../lib/MissionStatement.svelte";
-  import Footer from "../lib/Footer.svelte";
 </script>
 
 <Hero />
@@ -22,4 +21,3 @@
   </div>
 </div>
 <MissionStatement />
-<Footer />
