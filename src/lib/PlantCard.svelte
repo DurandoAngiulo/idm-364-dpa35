@@ -1,22 +1,26 @@
 <script>
   import Button from "$lib/Button.svelte";
+  export let thumbnail = "https://via.placeholder.com/500x400";
+  export let name = "name";
+  export let price = "$00.00";
+  export let slug;
 </script>
 
 <div class="cardContainer mb-5 mx-9 relative">
   <div class="imageContainer">
-    <img class="rounded-md mb-2 cardImage imageHover" src="https://via.placeholder.com/500x400" />
+    <img class="rounded-md mb-2 cardImage imageHover" src={thumbnail} alt="my image" />
     <div class="overlay rounded-md">
       <div class="detailsButton">
-        <Button label="More Details" />
+        <a href="/products/{slug}"> <Button label="More Details" text="More Details" /></a>
       </div>
     </div>
   </div>
   <div class="sm:flex sm:justify-between my-3">
-    <h3 class="leading-3">Aloe vera</h3>
-    <p class="primary-green font-medium leading-3 mt-2 sm:m-0">Price $50</p>
+    <h3 class="leading-3">{name}</h3>
+    <p class="primary-green font-medium leading-3 mt-2 sm:m-0">{price}</p>
   </div>
   <div class="existingButton">
-    <Button />
+    <Button text="Add To Cart" />
   </div>
 </div>
 

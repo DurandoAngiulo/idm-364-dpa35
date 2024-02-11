@@ -1,4 +1,8 @@
 <script>
+  import menu from "$lib/dist/svgs/menu.png";
+  import searchNav from "$lib/dist/svgs/search-nav.png";
+  import cart from "$lib/dist/svgs/cart.png";
+  import profile from "$lib/dist/svgs/profile.png";
   let isMenuOpen = false;
 
   const toggleMenu = () => {
@@ -21,15 +25,15 @@
 
       <div class="flex justify-between">
         <!-- Replace the placeholder URLs with your actual image URLs -->
-        <img src="https://via.placeholder.com/24" alt="Image 1" class="h-8 w-8" />
-        <img src="https://via.placeholder.com/24" alt="Image 2" class="h-8 w-8 ml-2" />
-        <img src="https://via.placeholder.com/24" alt="Image 3" class="h-8 w-8 ml-2" />
+        <img src={searchNav} alt="search" class="h-8 w-8" />
+        <img src={cart} alt="cart" class="h-8 w-8 ml-2" />
+        <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
       </div>
     </div>
 
     <div class="mobile-nav md:hidden">
-      <button class="text-white focus:outline-none" aria-label="Toggle Menu" on:click={toggleMenu}>
-        <img src="https://via.placeholder.com/24" alt="Image 1" class="h-8 w-8" />
+      <button class="text-white focus:outline-none bg-transparent" aria-label="Toggle Menu" on:click={toggleMenu}>
+        <img src={menu} alt="menu" class="" />
       </button>
 
       {#if isMenuOpen}
@@ -39,9 +43,9 @@
           <a href="#" class="dark-brown block navlink">About</a>
           <div class="flex w-3/12 justify-between">
             <!-- Replace the placeholder URLs with your actual image URLs -->
-            <img src="https://via.placeholder.com/24" alt="Image 1" class="h-8 w-8" />
-            <img src="https://via.placeholder.com/24" alt="Image 2" class="h-8 w-8 ml-2" />
-            <img src="https://via.placeholder.com/24" alt="Image 3" class="h-8 w-8 ml-2" />
+            <img src={searchNav} alt="search" class="h-8 w-8" />
+            <img src={cart} alt="cart" class="h-8 w-8 ml-2" />
+            <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
           </div>
         </div>
       {/if}

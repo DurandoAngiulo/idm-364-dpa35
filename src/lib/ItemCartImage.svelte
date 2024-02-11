@@ -1,12 +1,12 @@
 <!-- ItemCartPreview.svelte -->
 <script>
-  import aloe from "$lib/dist/images/aloe.png";
+  export let image;
 </script>
 
 <div class="container">
   <div class="square large drop-shadow-md"></div>
   <div class="square small drop-shadow-md"></div>
-  <img class="image-overlay" src={aloe} />
+  <img class="image-overlay" src={image} />
 </div>
 
 <style>
