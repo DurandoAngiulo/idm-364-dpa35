@@ -1,5 +1,6 @@
 <script>
-  import { onMount } from "svelte";
+  import { browser } from "$app/environment";
+  import { onMount, onDestroy } from "svelte";
   import { splitString } from "$lib/utils.js";
   export let name = "plantName";
   export let desktopBg;
@@ -7,67 +8,65 @@
   export let mobileBg;
   export let heroMsg;
 
-  let correctBackground = onMount(async () => {
-    let backgroundBreakpoint;
-    const windowWidth = window.innerWidth;
+  let windowWidth;
+  let correctBackground;
 
-    switch (true) {
-      case windowWidth < 640:
-        backgroundBreakpoint = mobileBg;
-        break;
+  if (browser) {
+    windowWidth = window.innerWidth;
+  }
 
-      case windowWidth >= 640 && windowWidth < 1024:
-        backgroundBreakpoint = tabletBg;
-        break;
-
-      case windowWidth >= 1024:
-        backgroundBreakpoint = desktopBg;
-        break;
-
-      default:
-        console.log("Unknown window width");
+  function updateWidth() {
+    if (browser) {
+      windowWidth = window.innerWidth;
     }
 
-    correctBackground = backgroundBreakpoint;
-    console.log(correctBackground);
+    if (windowWidth > 1024) {
+      correctBackground = desktopBg;
+    } else if (windowWidth > 768) {
+      correctBackground = tabletBg;
+    } else {
+      correctBackground = mobileBg;
+    }
+  }
+
+  onMount(() => {
+    // Initial width
+    updateWidth();
+    if (browser) {
+      window.addEventListener("resize", updateWidth);
+    }
   });
-  console.log(correctBackground);
+
+  onDestroy(() => {
+    if (browser) {
+      window.removeEventListener("resize", updateWidth);
+    }
+  });
   const [nameBeginning, nameEnd] = splitString(name);
 </script>
 
-{#await correctBackground}
-  <p>Loading...</p>
-{:then}
-  <div
-    style="--image_url: url({correctBackground})"
-    class="heroBackground rounded-md px-3 py-3 flex flex-wrap content-between"
-  >
-    <h1 class="font-normal block sm:w-9/12 md:w-7/12 lg:w-9/12 dark-cream">
-      {nameBeginning} <span class="primary-green font-semibold">{nameEnd}</span>
-    </h1>
-    <p class="italic text-xl block sm:w-9/12 md:w-6/12 lg:w-4/12">
-      {heroMsg}
-    </p>
-  </div>
-{/await}
+<div
+  style="background-image: url({correctBackground})"
+  class="heroBackground rounded-md px-3 py-3 flex flex-wrap content-between sm:content-evenly"
+>
+  <h1 class="font-normal block sm:w-9/12 md:w-7/12 lg:w-9/12 dark-cream">
+    {nameBeginning} <span class="primary-green font-semibold">{nameEnd}</span>
+  </h1>
+  <p class="dark-cream italic text-xl block sm:w-9/12 md:w-6/12 lg:w-4/12">
+    {heroMsg}
+  </p>
+</div>
 
 <style>
   .heroBackground {
-    background-image: var(--image-url);
     background-repeat: no-repeat;
     background-size: cover;
     height: 460px;
   }
 
   @media (min-width: 640px) and (max-width: 1024px) {
-    .heroBackground {
-      background-image: var(--image-url);
-    }
   }
 
   @media (min-width: 1024px) {
-    .heroBackground {
-      background-image: var(--image-url);
-    }
   }
 </style>
