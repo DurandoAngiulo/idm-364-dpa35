@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class=" quantityWidth rounded-3xl border-2 border-orange-950 px-5 flex justify-between">
+<div class=" quantityWidth rounded-3xl border-2 border-orange-950 px-5 flex justify-between h-8 self-center">
   <button class="bg-transparent text-orange-950" on:click={decrease}>-</button>
   <span class="">{quantity}</span>
   <button class="bg-transparent text-orange-950" on:click={increase}>+</button>

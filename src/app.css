@@ -26,29 +26,32 @@
 .light-cream {
   color: var(--light-cream);
 }
-.light-cream-bg {
-  background-color: var(--light-cream);
-}
 .mid-cream {
   color: var(--mid-cream);
-}
-.mid-cream-bg {
-  background-color: var(--mid-cream);
 }
 .dark-cream {
   color: var(--dark-cream);
 }
-.dark-cream-bg {
-  background-color: var(--dark-cream);
-}
 .brown-grey {
   color: var(--brown-grey);
 }
-.brown-grey-bg {
-  background-color: var(--brown-grey);
-}
 .dark-brown {
   color: var(--dark-brown);
+}
+.light-cream-bg {
+  background-color: var(--light-cream);
+}
+
+.mid-cream-bg {
+  background-color: var(--mid-cream);
+}
+
+.dark-cream-bg {
+  background-color: var(--dark-cream);
+}
+
+.brown-grey-bg {
+  background-color: var(--brown-grey);
 }
 
 body {
