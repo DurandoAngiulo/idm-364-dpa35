@@ -13,20 +13,23 @@
 <nav class="mb-5">
   <div class="flex justify-between items-center">
     <div class="">
-      <h1 class=" dark-brown text-3xl font-bol w-max block mr-8">Arid <span class="primary-green">Oasis</span></h1>
+      <a href="/"
+        ><h1 class=" dark-brown text-3xl font-bol w-max block mr-8">
+          Arid <span class="primary-green">Oasis</span>
+        </h1></a
+      >
     </div>
 
     <div class="desktop-nav flex justify-between items-center w-9/12">
       <div>
-        <a href="#" class="dark-brown navlink">Browse</a>
-        <a href="#" class="dark-brown mx-4 navlink">Collections</a>
-        <a href="#" class="dark-brown navlink">About</a>
+        <a href="/browse" class="dark-brown navlink">Browse</a>
+        <a href="/collections" class="dark-brown mx-4 navlink">Collections</a>
+        <a href="/about" class="dark-brown navlink">About</a>
       </div>
 
       <div class="flex justify-between">
-        <!-- Replace the placeholder URLs with your actual image URLs -->
         <img src={searchNav} alt="search" class="h-8 w-8" />
-        <img src={cart} alt="cart" class="h-8 w-8 ml-2" />
+        <a href="/cart"><img src={cart} alt="cart" class="h-8 w-8 ml-2" /></a>
         <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
       </div>
     </div>
@@ -38,13 +41,12 @@
 
       {#if isMenuOpen}
         <div class="absolute top-13 right-0 p-4 space-y-4 w-full mobileNavBg">
-          <a href="#" class="dark-brown block navlink">Browse</a>
-          <a href="#" class="dark-brown block navlink">Collections</a>
-          <a href="#" class="dark-brown block navlink">About</a>
+          <a href="/browse" class="dark-brown block navlink">Browse</a>
+          <a href="/collections" class="dark-brown block navlink">Collections</a>
+          <a href="/about" class="dark-brown block navlink">About</a>
           <div class="flex w-3/12 justify-between">
-            <!-- Replace the placeholder URLs with your actual image URLs -->
             <img src={searchNav} alt="search" class="h-8 w-8" />
-            <img src={cart} alt="cart" class="h-8 w-8 ml-2" />
+            <a href="/cart"><img src={cart} alt="cart" class="h-8 w-8 ml-2" /></a>
             <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
           </div>
         </div>
