@@ -1,28 +1,37 @@
+<!-- ItemDescription.svelte -->
 <script>
+  import { onMount } from "svelte";
   import QuantityButton from "$lib/QuantityButton.svelte";
+  import { addToCart, cart } from "$lib/stores/cartStore.js"; // Import addToCart function from CartStore
   import Button from "$lib/Button.svelte";
   export let description;
   export let price;
   export let name;
+  export let id;
+
+  let quantity = 1;
+
+  function handleAddToCart() {
+    console.log("success");
+    addToCart({
+      id: id,
+      name: name,
+      quantity: quantity
+    });
+  }
+  onMount(() => {
+    const unsubscribe = cart.subscribe((value) => {
+      // console.log(value, "cart!");
+    });
+  });
 </script>
 
 <div class="sm:w-5/12">
-  <h2 class="text-2xl text-center md:text-end md:text-4xl"><span class="primary-green">{name} </span>Plant</h2>
-  <div class="flex justify-center my-3"><div class="horizonBorder"></div></div>
-  <p>
-    {description}
-  </p>
-  <div class=" flex justify-between mt-5 lg:justify-end lg:flex-wrap">
-    <p class="font-medium text-lg md:w-full lg:text-end">Price {price}</p>
-    <QuantityButton />
+  <h2>{name}</h2>
+  <p>{description}</p>
+  <div class="flex flex-wrap justify-end mt-2">
+    <p class="w-full text-right md:text-2xl">Price: {price}</p>
+    <div class="w-full flex flex-wrap justify-end my-5"><QuantityButton bind:quantity /></div>
+    <Button clickAction={handleAddToCart} text="Add To Cart" />
   </div>
-  <div class="flex justify-end mt-5"><Button text="Add to Cart" /></div>
 </div>
-
-<style>
-  .horizonBorder {
-    border-bottom: 1px solid var(--brown-grey);
-    width: 100%;
-    height: 0;
-  }
-</style>

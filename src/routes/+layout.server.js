@@ -4,6 +4,8 @@ import { plants } from "$lib/data";
 export function load() {
   return {
     plants: plants.map((plant) => ({
+      id: plant.id,
+      category: plant.category,
       name: plant.plantName,
       heroMessage: plant.heroMessage,
       slug: slugify(plant.plantName),

@@ -5,6 +5,7 @@
   import ItemDescription from "$lib/ItemDescription.svelte";
   export let data;
   const {
+    id,
     plantName,
     heroMessage,
     description,
@@ -42,5 +43,5 @@
 </div>
 <div class="mt-20 sm:flex sm:justify-between">
   <ItemCartImage image={productPng} />
-  <ItemDescription {description} {price} name={plantName} />
+  <ItemDescription {id} {description} {price} name={plantName} />
 </div>

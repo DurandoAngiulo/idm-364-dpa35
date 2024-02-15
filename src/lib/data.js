@@ -1,5 +1,7 @@
 export const plants = [
   {
+    id: 0,
+    category: "bestseller",
     plantName: "Aloe Vera",
     heroMessage:
       "Aloe vera, revered for centuries for its medicinal properties, possesses lush, spear-like leaves that conceal a treasure trove of soothing gel, a symbol of nature's gentle remedy and botanical grace.",
@@ -17,6 +19,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707595407/idm-364/opzikhpyuipelye1udru.png"
   },
   {
+    id: 1,
+    category: "bestseller",
     plantName: "Ghost Echeveria",
     heroMessage:
       "Ghost Echeveria: Silvery rosettes exuding desert mystique, embodying succulent elegance in garden landscapes.",
@@ -34,6 +38,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707596081/idm-364/i00z7oazjauqrnnxmc90.png"
   },
   {
+    id: 2,
+    category: "bestseller",
     plantName: "Green Jade",
     heroMessage: "Symbolizing prosperity, a Jade succulent’s glossy leaves can bring enduring charm to any space.",
     description:
@@ -50,6 +56,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707609723/idm-364/mcqukgv2a7rrzeiucgbf.png"
   },
   {
+    id: 3,
+    category: "NewArrival",
     plantName: "Mini Cactus",
     heroMessage: "Tiny wonders boasting intricate patterns and vibrant spines, Mini cactuses embody desert resilience.",
     description:
@@ -66,6 +74,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707596544/idm-364/amd1dzvjuvr8xtwil3dg.png"
   },
   {
+    id: 4,
+    category: "NewArrival",
     plantName: "Bunny Ear Cactus",
     heroMessage:
       "Adorable cacti pads adorned with tiny spines and ear like flaps, these succulents embodying desert charm and resilience.",
@@ -83,6 +93,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707610353/idm-364/llbnnvgd5iohzuwfuilz.png"
   },
   {
+    id: 5,
+    category: "NewArrival",
     plantName: "Snake Plant",
     heroMessage: "Upright leaves with striking patterns, purifying air while adding modern elegance.",
     description:
@@ -99,6 +111,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707610923/idm-364/lj9kvfp3dgfmww0mud3j.png"
   },
   {
+    id: 6,
+    category: "topRated",
     plantName: "Rat Tail Cactus",
     heroMessage: "Graceful stems with vibrant blooms, adding exotic charm to hanging displays.",
     description:
@@ -115,6 +129,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707611113/idm-364/i1ge2xvkblpehip4etd0.png"
   },
   {
+    id: 7,
+    category: "topRated",
     plantName: "Red-Tipped Crassula",
     heroMessage: "Diverse succulents with fleshy leaves, epitomizing beauty and resilience in various forms.",
     description:
@@ -131,6 +147,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707611431/idm-364/gvvq1zakjv13lplcdewc.png"
   },
   {
+    id: 8,
+    category: "topRated",
     plantName: "Sedeveria Letizia",
     heroMessage: "Compact rosettes in green and pink hues, epitomizing elegance and ease of care.",
     description:
@@ -147,6 +165,8 @@ export const plants = [
     productPng: "https://res.cloudinary.com/dsysuymw2/image/upload/v1707611619/idm-364/hcyrsqbp0xs00noyrxkl.png"
   },
   {
+    id: 9,
+    category: "topRated",
     plantName: "Moonstone Succulent",
     heroMessage: "Embrace celestial beauty with this mesmerizing succulent for your indoor sanctuary",
     description:
