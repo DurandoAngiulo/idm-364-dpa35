@@ -2,12 +2,13 @@
 <script>
   import { onMount } from "svelte";
   import QuantityButton from "$lib/QuantityButton.svelte";
-  import { addToCart, cart } from "$lib/stores/cartStore.js"; // Import addToCart function from CartStore
+  import { addToCart, cart } from "$lib/stores/cartStore.js";
   import Button from "$lib/Button.svelte";
   export let description;
   export let price;
   export let name;
   export let id;
+  export let thumbnail;
 
   let quantity = 1;
 
@@ -16,7 +17,9 @@
     addToCart({
       id: id,
       name: name,
-      quantity: quantity
+      quantity: quantity,
+      price: price,
+      thumbnail: thumbnail
     });
   }
   onMount(() => {

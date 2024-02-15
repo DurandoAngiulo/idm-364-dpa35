@@ -1,9 +1,25 @@
 <script>
   import Button from "$lib/Button.svelte";
+  import { addToCart, cart } from "$lib/stores/cartStore.js";
+
   export let thumbnail = "https://via.placeholder.com/500x400";
   export let name = "name";
   export let price = "$00.00";
   export let slug;
+  export let id;
+
+  let quantity = 1;
+
+  function handleAddToCart() {
+    console.log("success");
+    addToCart({
+      id: id,
+      name: name,
+      quantity: quantity,
+      price: price,
+      thumbnail: thumbnail
+    });
+  }
 </script>
 
 <div class="cardContainer mb-5 mx-9 relative">
@@ -20,7 +36,7 @@
     <p class="primary-green font-medium leading-3 mt-2 sm:m-0">{price}</p>
   </div>
   <div class="existingButton">
-    <Button text="Add To Cart" />
+    <Button text="Add To Cart" clickAction={handleAddToCart} />
   </div>
 </div>
 

@@ -8,30 +8,34 @@
 
   let cartItems = [];
   let quantities = {};
+  export let subtotal = 0;
 
   onMount(() => {
     const unsubscribe = cart.subscribe((value) => {
       cartItems = value;
+      console.log(cartItems, "cart!");
+      getTotal(cartItems);
       updateQuantities();
     });
     return unsubscribe;
   });
 
   function updateQuantities() {
-    quantities = {}; // Reset quantities object
+    quantities = {};
     cartItems.forEach((item) => {
-      quantities[item.id] = item.quantity; // Store quantity for each item ID
+      quantities[item.id] = item.quantity;
       console.log(quantities);
     });
   }
-
-  function parsePlantData(id, plantData) {
-    if (!plantData) return null; // Check if plantData is missing
-    return plantData.find((plant) => plant.id === id);
+  function getTotal(cart) {
+    console.log(cart, "test");
+    cart.forEach((item) => {
+      console.log(item, "item");
+      subtotal = subtotal + item.quantity * item.price;
+      console.log(subtotal, "subTotal");
+    });
   }
-
   $: {
-    // Reactive statement to track changes in the 'quantity' property of 'QuantityButton'
     console.log("Quantity changed:", quantities);
   }
 </script>
@@ -43,10 +47,10 @@
         class="py-3 mid-cream-bg flex h-24 flex-wrap justify-between content-center rounded-lg px-4 sm:h-20 md:py-0 w-10/12"
       >
         <div class="flex flex-wrap justify-between">
-          <img class="cartImage rounded-md" src={parsePlantData(item.id, data.plants).thumbnail} alt={item.name} />
+          <img class="cartImage rounded-md" src={item.thumbnail} alt={item.name} />
           <h3 class="block self-center ml-5">{item.name}</h3>
         </div>
-        <p class="self-center">{parsePlantData(item.id, data.plants).price}</p>
+        <p class="self-center">${item.price}</p>
         <div class="w-full flex flex-wrap justify-end sm:w-auto">
           <QuantityButton bind:quantity={quantities[item.id]} />
         </div>

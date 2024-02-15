@@ -17,7 +17,8 @@
     productHeaderM,
     productHeaderT,
     productHeaderD,
-    productPng
+    productPng,
+    thumbnail
   } = data.plant;
 </script>
 
@@ -43,5 +44,5 @@
 </div>
 <div class="mt-20 sm:flex sm:justify-between">
   <ItemCartImage image={productPng} />
-  <ItemDescription {id} {description} {price} name={plantName} />
+  <ItemDescription {id} {description} {price} name={plantName} {thumbnail} />
 </div>

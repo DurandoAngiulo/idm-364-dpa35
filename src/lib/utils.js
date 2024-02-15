@@ -19,11 +19,8 @@ export function splitString(inputString) {
   return [variable1, variable2];
 }
 
-export function handleAddToCart() {
-  console.log("success");
-  addToCart({
-    id: id,
-    name: name,
-    quantity: quantity
-  });
+export function calculateTax(price, taxRate) {
+  const taxAmount = price * taxRate;
+  const roundedTaxAmount = Math.round(taxAmount * 100) / 100;
+  return roundedTaxAmount.toFixed(2);
 }

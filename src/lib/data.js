@@ -7,7 +7,7 @@ export const plants = [
       "Aloe vera, revered for centuries for its medicinal properties, possesses lush, spear-like leaves that conceal a treasure trove of soothing gel, a symbol of nature's gentle remedy and botanical grace.",
     description:
       "Aloe vera, with its thick, fleshy leaves adorned with serrated edges, exudes an aura of natural resilience and healing. Its succulent greenery, crowned with clusters of gel-filled compartments, offers a soothing balm for the skin and a refreshing touch of botanical elegance to any space.",
-    price: "$30.00",
+    price: 30.0,
     watering: "2 weeks",
     sunlight: "Indirect",
     temperature: "55-80",
@@ -26,7 +26,7 @@ export const plants = [
       "Ghost Echeveria: Silvery rosettes exuding desert mystique, embodying succulent elegance in garden landscapes.",
     description:
       "Ghost Echeveria, with its striking silvery-gray foliage arranged in elegant rosettes, casts an ethereal allure, evoking the mystique of desert landscapes and the delicate beauty of succulent gardens.",
-    price: "$35.00",
+    price: 35.0,
     watering: "1-2 weeks",
     sunlight: "Indirect",
     temperature: "65-80",
@@ -44,7 +44,7 @@ export const plants = [
     heroMessage: "Symbolizing prosperity, a Jade succulent’s glossy leaves can bring enduring charm to any space.",
     description:
       "Jade plants are iconic succulents cherished for their glossy, jade-green leaves and their symbolic association with prosperity and good fortune. These resilient plants, native to South Africa, boast a tree-like appearance with thick, woody stems and branches that give them an enduring presence in both indoor and outdoor settings. With proper care, they can grow into impressive specimens, creating a sense of tranquility and abundance wherever they thrive.",
-    price: "$40.00",
+    price: 40.0,
     watering: "2-3 weeks",
     sunlight: "Indirect",
     temperature: "65-75",
@@ -62,7 +62,7 @@ export const plants = [
     heroMessage: "Tiny wonders boasting intricate patterns and vibrant spines, Mini cactuses embody desert resilience.",
     description:
       "Mini cacti are diminutive succulents that often feature intricate patterns and colorful spines, making them delightful additions to windowsills, desks, or small gardens. Despite their small stature, mini cacti showcase the resilience and beauty of desert flora, bringing a touch of the arid landscape into any space.",
-    price: "$20.00",
+    price: 20.0,
     watering: "1-2 weeks",
     sunlight: "full",
     temperature: "65-85",
@@ -81,7 +81,7 @@ export const plants = [
       "Adorable cacti pads adorned with tiny spines and ear like flaps, these succulents embodying desert charm and resilience.",
     description:
       "Bunny Ear Cactus, scientifically known as Opuntia microdasys, is a charming succulent adorned with flat, oval pads resembling the ears of a bunny. Native to Mexico, this cactus species features tiny glochids, or hair-like spines, covering its pads, adding to its endearing appearance. With its low-maintenance nature and whimsical aesthetic, the Bunny Ear Cactus brings a touch of desert whimsy to any collection of succulents.",
-    price: "$25.00",
+    price: 25.0,
     watering: "2-3 weeks",
     sunlight: "full",
     temperature: "70-100",
@@ -99,7 +99,7 @@ export const plants = [
     heroMessage: "Upright leaves with striking patterns, purifying air while adding modern elegance.",
     description:
       "The Snake Plant, also known as Sansevieria, is a hardy succulent recognized for its striking upright leaves that resemble the pattern of snake skin. Native to West Africa, this resilient plant thrives in low light and requires minimal care, making it an ideal choice for indoor spaces. Its architectural form and air-purifying properties make the Snake Plant a popular choice for modern interiors, adding a touch of elegance and vitality to any room.",
-    price: "$30.00",
+    price: 30.0,
     watering: "2-4 weeks",
     sunlight: "low",
     temperature: "65-80",
@@ -117,7 +117,7 @@ export const plants = [
     heroMessage: "Graceful stems with vibrant blooms, adding exotic charm to hanging displays.",
     description:
       "The Rat Tail Cactus, scientifically known as Aporocactus flagelliformis, is a unique and captivating succulent native to Mexico. Its long, slender stems resemble the tail of a rat, hence its whimsical name. Adorned with clusters of delicate pink or red flowers in spring and summer, this trailing cactus adds a graceful and exotic touch to hanging baskets or elevated planters. With its trailing habit and colorful blooms, the Rat Tail Cactus is a charming addition to any succulent collection.",
-    price: "$30.00",
+    price: 30.0,
     watering: "1-2 weeks",
     sunlight: "Indirect",
     temperature: "65-80",
@@ -135,7 +135,7 @@ export const plants = [
     heroMessage: "Diverse succulents with fleshy leaves, epitomizing beauty and resilience in various forms.",
     description:
       "Crassula is a diverse genus of succulent plants characterized by their fleshy leaves and varying growth habits. Native to many regions around the world, including South Africa and Madagascar, Crassula species range from small, compact rosettes to sprawling, tree-like forms. With their attractive foliage and low-maintenance requirements, Crassulas are popular choices for both indoor and outdoor cultivation, bringing beauty and resilience to any succulent garden or container arrangement.",
-    price: "$30.00",
+    price: 30.0,
     watering: "1-2 weeks",
     sunlight: "Indirect",
     temperature: "60-75",
@@ -153,7 +153,7 @@ export const plants = [
     heroMessage: "Compact rosettes in green and pink hues, epitomizing elegance and ease of care.",
     description:
       "Sedeveria 'Letizia', a charming succulent hybrid, is a delightful cross between Sedum and Echeveria species, combining the best traits of both. With its compact rosettes of fleshy leaves in shades of green and pink, 'Letizia' adds a pop of color and texture to any succulent collection or garden bed. This low-maintenance plant thrives in well-draining soil and bright sunlight, making it an ideal choice for beginners and seasoned succulent enthusiasts alike.",
-    price: "$35.00",
+    price: 35.0,
     watering: "1-2 weeks",
     sunlight: "Indirect",
     temperature: "65-80",
@@ -171,7 +171,7 @@ export const plants = [
     heroMessage: "Embrace celestial beauty with this mesmerizing succulent for your indoor sanctuary",
     description:
       "The Moonstone Succulent is a stunning succulent known for its powdery, blue-green leaves resembling moonstones. Native to Mexico, it thrives in dry, arid conditions, making it perfect for low-maintenance indoor environments. With proper care, it can produce delicate pink flowers.",
-    price: "$35.00",
+    price: 35.0,
     watering: "2-3 weeks",
     sunlight: "Indirect",
     temperature: "65-75",
