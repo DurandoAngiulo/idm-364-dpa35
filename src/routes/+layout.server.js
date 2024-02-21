@@ -1,6 +1,5 @@
 import { slugify } from "$lib/utils";
 import { db } from "$lib/firebase/firebase.js";
-
 import { collection, doc, getDocs } from "firebase/firestore";
 
 // export function load() {

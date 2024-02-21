@@ -1,10 +1,8 @@
 <script>
-  import { cart, addToCart } from "$lib/stores/cartStore.js";
+  import { cart, addToCart, removeFromCart } from "$lib/stores/cartStore.js";
   import { onMount } from "svelte";
   import QuantityButton from "$lib/QuantityButton.svelte";
-  import Xbutton from "$lib/Xbutton.svelte";
-
-  export let data;
+  import Xbutton from "$lib/Xbutton.svelte"; // Import Xbutton component
 
   let cartItems = [];
   let quantities = {};
@@ -13,7 +11,6 @@
   onMount(() => {
     const unsubscribe = cart.subscribe((value) => {
       cartItems = value;
-      console.log(cartItems, "cart!");
       getTotal(cartItems);
       updateQuantities();
     });
@@ -24,23 +21,15 @@
     quantities = {};
     cartItems.forEach((item) => {
       quantities[item.id] = item.quantity;
-      console.log(quantities);
     });
   }
+
   function getTotal(cart) {
-    console.log(cart, "test");
-    cart.forEach((item) => {
-      console.log(item, "item");
-      subtotal = subtotal + item.quantity * item.price;
-      console.log(subtotal, "subTotal");
-    });
-  }
-  $: {
-    console.log("Quantity changed:", quantities);
+    subtotal = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
   }
 </script>
 
-<div class="mt-5 flex flex-wrap justify-center md:w-7/12">
+<div class="mt-5 flex flex-wrap justify-center md:w-8/12">
   {#each cartItems as item (item.id)}
     <div class="flex flex-wrap w-full mb-4 justify-between self-center">
       <div
@@ -50,12 +39,16 @@
           <img class="cartImage rounded-md" src={item.thumbnail} alt={item.name} />
           <h3 class="block self-center ml-5">{item.name}</h3>
         </div>
-        <p class="self-center">${item.price}</p>
+
         <div class="w-full flex flex-wrap justify-end sm:w-auto">
+          <p class="mr-10 self-center">${item.price}</p>
           <QuantityButton bind:quantity={quantities[item.id]} />
         </div>
       </div>
-      <Xbutton />
+      <div class="sm:mr-10 self-center lg:mr-20">
+        <!-- Pass removeFromCart function to Xbutton component -->
+        <Xbutton clickAction={() => removeFromCart(item.id)} />
+      </div>
     </div>
   {/each}
 </div>

@@ -14,3 +14,6 @@ export function addToCart(item) {
     return items;
   });
 }
+export function removeFromCart(itemId) {
+  cart.update((items) => items.filter((item) => item.id !== itemId));
+}

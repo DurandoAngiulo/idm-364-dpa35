@@ -1,6 +1,11 @@
+<script>
+  export let clickAction;
+</script>
+
 <button
   type="button"
   class="rounded-md p-2 inline-flex items-center justify-center brown-grey hover: hover:text-red-900 focus:outline-none focus:ring-2 focus:ring-inse"
+  on:click={clickAction}
 >
   <span class="sr-only">Close menu</span>
   <!-- Heroicon name: outline/x -->

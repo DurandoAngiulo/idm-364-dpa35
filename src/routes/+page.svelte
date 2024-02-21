@@ -6,6 +6,7 @@
   import { db } from "$lib/firebase/firebase.js";
   import { collection, doc, setDoc } from "firebase/firestore";
   export let data;
+  console.log(db)
 </script>
 
 <Hero />
