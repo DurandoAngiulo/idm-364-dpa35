@@ -1,8 +1,9 @@
+<!-- cartItems.svelte -->
 <script>
-  import { cart, addToCart, removeFromCart } from "$lib/stores/cartStore.js";
+  import { cart, removeFromCart, addQuantityToCartItem, removeQuantityFromCartItem } from "$lib/stores/cartStore.js";
   import { onMount } from "svelte";
-  import QuantityButton from "$lib/QuantityButton.svelte";
-  import Xbutton from "$lib/Xbutton.svelte"; // Import Xbutton component
+  import QuantityButtonCart from "$lib/QuantityButtonCart.svelte";
+  import Xbutton from "$lib/Xbutton.svelte";
 
   let cartItems = [];
   let quantities = {};
@@ -12,17 +13,9 @@
     const unsubscribe = cart.subscribe((value) => {
       cartItems = value;
       getTotal(cartItems);
-      updateQuantities();
     });
     return unsubscribe;
   });
-
-  function updateQuantities() {
-    quantities = {};
-    cartItems.forEach((item) => {
-      quantities[item.id] = item.quantity;
-    });
-  }
 
   function getTotal(cart) {
     subtotal = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
@@ -39,14 +32,16 @@
           <img class="cartImage rounded-md" src={item.thumbnail} alt={item.name} />
           <h3 class="block self-center ml-5">{item.name}</h3>
         </div>
-
         <div class="w-full flex flex-wrap justify-end sm:w-auto">
           <p class="mr-10 self-center">${item.price}</p>
-          <QuantityButton bind:quantity={quantities[item.id]} />
+          <QuantityButtonCart
+            addQuantityToCart={() => addQuantityToCartItem(item.id)}
+            removeQuantityFromCart={() => removeQuantityFromCartItem(item.id)}
+            quantity={item.quantity}
+          />
         </div>
       </div>
       <div class="sm:mr-10 self-center lg:mr-20">
-        <!-- Pass removeFromCart function to Xbutton component -->
         <Xbutton clickAction={() => removeFromCart(item.id)} />
       </div>
     </div>

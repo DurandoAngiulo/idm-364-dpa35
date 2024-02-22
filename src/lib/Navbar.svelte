@@ -1,9 +1,18 @@
 <script>
   import menu from "$lib/dist/svgs/menu.png";
   import searchNav from "$lib/dist/svgs/search-nav.png";
-  import cart from "$lib/dist/svgs/cart.png";
+  import cartImage from "$lib/dist/svgs/cart.png";
   import profile from "$lib/dist/svgs/profile.png";
+  import { cart } from "$lib/stores/cartStore.js";
+  import { writable } from "svelte/store";
+
   let isMenuOpen = false;
+  let cartCount = writable(0);
+
+  $: {
+    let items = $cart;
+    cartCount.set(items.length);
+  }
 
   const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
@@ -29,7 +38,18 @@
 
       <div class="flex justify-between">
         <img src={searchNav} alt="search" class="h-8 w-8" />
-        <a href="/cart"><img src={cart} alt="cart" class="h-8 w-8 ml-2" /></a>
+        <a href="/cart">
+          <div class="relative">
+            <img src={cartImage} alt="cart" class="h-8 w-8 ml-2" />
+            {#if $cart.length > 0}
+              <div
+                class="absolute top-0 left-8 h-4 w-4 bg-lime-800 text-white rounded-full flex items-center justify-center text-xs"
+              >
+                {$cart.length}
+              </div>
+            {/if}
+          </div>
+        </a>
         <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
       </div>
     </div>
@@ -46,7 +66,7 @@
           <a href="/about" class="dark-brown block navlink">About</a>
           <div class="flex w-3/12 justify-between">
             <img src={searchNav} alt="search" class="h-8 w-8" />
-            <a href="/cart"><img src={cart} alt="cart" class="h-8 w-8 ml-2" /></a>
+            <a href="/cart"><img src={cartImage} alt="cart" class="h-8 w-8 ml-2" /></a>
             <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
           </div>
         </div>
