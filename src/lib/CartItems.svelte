@@ -6,13 +6,13 @@
   import Xbutton from "$lib/Xbutton.svelte";
 
   let cartItems = [];
-  let quantities = {};
   export let subtotal = 0;
 
   onMount(() => {
     const unsubscribe = cart.subscribe((value) => {
       cartItems = value;
       getTotal(cartItems);
+      console.log(cartItems);
     });
     return unsubscribe;
   });
@@ -33,7 +33,7 @@
           <h3 class="block self-center ml-5">{item.name}</h3>
         </div>
         <div class="w-full flex flex-wrap justify-end sm:w-auto">
-          <p class="mr-10 self-center">${item.price}</p>
+          <p class="mr-10 self-center">${item.price}.00</p>
           <QuantityButtonCart
             addQuantityToCart={() => addQuantityToCartItem(item.id)}
             removeQuantityFromCart={() => removeQuantityFromCartItem(item.id)}

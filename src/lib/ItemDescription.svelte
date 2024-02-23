@@ -33,7 +33,7 @@
   <h2>{name}</h2>
   <p>{description}</p>
   <div class="flex flex-wrap justify-end mt-2">
-    <p class="w-full text-right md:text-2xl">Price: {price}</p>
+    <p class="w-full text-right md:text-2xl">Price: ${price}.00</p>
     <div class="w-full flex flex-wrap justify-end my-5"><QuantityButton bind:quantity /></div>
     <Button clickAction={handleAddToCart} text="Add To Cart" />
   </div>

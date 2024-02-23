@@ -29,11 +29,10 @@
       >
     </div>
 
-    <div class="desktop-nav flex justify-between items-center w-9/12">
-      <div>
-        <a href="/browse" class="dark-brown navlink">Browse</a>
-        <a href="/collections" class="dark-brown mx-4 navlink">Collections</a>
-        <a href="/about" class="dark-brown navlink">About</a>
+    <div class="desktop-nav flex">
+      <div class="mr-10">
+        <a href="/browse" class="dark-brown navlink mr-5 text-lg">Browse</a>
+        <a href="/about" class="dark-brown navlink text-lg">About</a>
       </div>
 
       <div class="flex justify-between">
@@ -62,7 +61,6 @@
       {#if isMenuOpen}
         <div class="absolute top-13 right-0 p-4 space-y-4 w-full mobileNavBg">
           <a href="/browse" class="dark-brown block navlink">Browse</a>
-          <a href="/collections" class="dark-brown block navlink">Collections</a>
           <a href="/about" class="dark-brown block navlink">About</a>
           <div class="flex w-3/12 justify-between">
             <img src={searchNav} alt="search" class="h-8 w-8" />

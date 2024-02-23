@@ -13,7 +13,7 @@
   function handleAddToCart() {
     console.log("success");
     addToCart({
-      id: id,
+      id: parseInt(id),
       name: name,
       quantity: quantity,
       price: price,
@@ -27,13 +27,13 @@
     <img class="rounded-md mb-2 cardImage imageHover" src={thumbnail} alt="my image" />
     <div class="overlay rounded-md">
       <div class="detailsButton">
-        <a href="/products/{slug}"> <Button label="More Details" text="More Details" /></a>
+        <a href="/products/{slug}"> <Button text="More Details" clickAction={""} /></a>
       </div>
     </div>
   </div>
   <div class="sm:flex sm:justify-between my-3">
     <h3 class="leading-3">{name}</h3>
-    <p class="primary-green font-medium leading-3 mt-2 sm:m-0">{price}</p>
+    <p class="primary-green font-medium leading-3 mt-2 sm:m-0">${price}.00</p>
   </div>
   <div class="existingButton">
     <Button text="Add To Cart" clickAction={handleAddToCart} />
