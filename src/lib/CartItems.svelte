@@ -22,7 +22,7 @@
   }
 </script>
 
-<div class="mt-5 flex flex-wrap justify-center md:w-8/12">
+<div class="mt-5 flex flex-wrap justify-center sm:w-11/12 md:w-10/12 lg:w-11/12">
   {#each cartItems as item (item.id)}
     <div class="flex flex-wrap w-full mb-4 justify-between self-center">
       <div
@@ -41,7 +41,7 @@
           />
         </div>
       </div>
-      <div class="sm:mr-10 self-center lg:mr-20">
+      <div class="sm:mr-10 self-center lg:mr-15">
         <Xbutton clickAction={() => removeFromCart(item.id)} />
       </div>
     </div>

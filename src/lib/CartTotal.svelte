@@ -1,8 +1,18 @@
 <script>
   import Button from "$lib/Button.svelte";
+  import Modal from "$lib/Modal.svelte";
   export let subtotal;
   export let tax;
   export let total;
+  let isModalVisible = false;
+  let modalMessage = "Congratulations! You have checked out.";
+  function handleCheckout() {
+    isModalVisible = true;
+  }
+
+  function closeModal() {
+    isModalVisible = false;
+  }
 </script>
 
 <div class="md:mt-5 md:w-4/12">
@@ -20,7 +30,10 @@
     <h3 class="text-xl">${total}</h3>
   </div>
 
-  <Button text="Checkout" />
+  <Button text="Checkout" clickAction={handleCheckout} />
+  {#if isModalVisible}
+    <Modal message={modalMessage} {closeModal} />
+  {/if}
 </div>
 
 <style>

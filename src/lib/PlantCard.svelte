@@ -1,17 +1,21 @@
 <script>
   import Button from "$lib/Button.svelte";
   import { addToCart, cart } from "$lib/stores/cartStore.js";
+  import Modal from "$lib/Modal.svelte";
 
   export let thumbnail = "https://via.placeholder.com/500x400";
   export let name = "name";
   export let price = "$00.00";
   export let slug;
   export let id;
+  let isModalVisible = false;
+  let modalMessage = "Item added to cart!";
 
   let quantity = 1;
 
   function handleAddToCart() {
     console.log("success");
+    isModalVisible = true;
     addToCart({
       id: parseInt(id),
       name: name,
@@ -19,6 +23,9 @@
       price: price,
       thumbnail: thumbnail
     });
+  }
+  function closeModal() {
+    isModalVisible = false;
   }
 </script>
 
@@ -38,6 +45,9 @@
   <div class="existingButton">
     <Button text="Add To Cart" clickAction={handleAddToCart} />
   </div>
+  {#if isModalVisible}
+    <Modal message={modalMessage} {closeModal} />
+  {/if}
 </div>
 
 <style>
