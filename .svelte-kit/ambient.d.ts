@@ -26,12 +26,12 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const VITE_FIREBASE_APIKEY: string;
-	export const VITE_FIREBASE_AUTH_DOMAIN: string;
-	export const VITE_FIREBASE_PROJECT_ID: string;
-	export const VITE_FIREBASE_STORAGE_BUCKET: string;
-	export const VITE_FIREBASE_MESSAGING_SENDER_PUBLIC_ID: string;
-	export const VITE_FIREBASE_APP_ID: string;
+	export const VITE_PUBLIC_FIREBASE_APIKEY: string;
+	export const VITE_PUBLIC_FIREBASE_AUTH_DOMAIN: string;
+	export const VITE_PUBLIC_FIREBASE_PROJECT_ID: string;
+	export const VITE_PUBLIC_FIREBASE_STORAGE_BUCKET: string;
+	export const VITE_PUBLIC_FIREBASE_MESSAGING_SENDER_PUBLIC_ID: string;
+	export const VITE_PUBLIC_FIREBASE_APP_ID: string;
 	export const rvm_use_flag: string;
 	export const rvm_bin_path: string;
 	export const TERM_PROGRAM: string;
@@ -141,12 +141,12 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		VITE_FIREBASE_APIKEY: string;
-		VITE_FIREBASE_AUTH_DOMAIN: string;
-		VITE_FIREBASE_PROJECT_ID: string;
-		VITE_FIREBASE_STORAGE_BUCKET: string;
-		VITE_FIREBASE_MESSAGING_SENDER_PUBLIC_ID: string;
-		VITE_FIREBASE_APP_ID: string;
+		VITE_PUBLIC_FIREBASE_APIKEY: string;
+		VITE_PUBLIC_FIREBASE_AUTH_DOMAIN: string;
+		VITE_PUBLIC_FIREBASE_PROJECT_ID: string;
+		VITE_PUBLIC_FIREBASE_STORAGE_BUCKET: string;
+		VITE_PUBLIC_FIREBASE_MESSAGING_SENDER_PUBLIC_ID: string;
+		VITE_PUBLIC_FIREBASE_APP_ID: string;
 		rvm_use_flag: string;
 		rvm_bin_path: string;
 		TERM_PROGRAM: string;
