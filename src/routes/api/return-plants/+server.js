@@ -13,7 +13,20 @@ export async function GET(request) {
     const plantData = doc.data();
     const plant = {
       id: doc.id,
-      name: plantData.plantName
+      category: plantData.category,
+      name: plantData.plantName,
+      heroMessage: plantData.heroMessage,
+      slug: slugify(plantData.plantName),
+      price: plantData.price,
+      watering: plantData.watering,
+      sunlight: plantData.sunlight,
+      temperature: plantData.temperature,
+      soilType: plantData.soilType,
+      thumbnail: plantData.thumbnail,
+      productHeaderM: plantData.productHeaderM,
+      productHeaderT: plantData.productHeaderT,
+      productHeaderD: plantData.productHeaderD,
+      productPng: plantData.productPng
     };
     plants.push(plant);
   });
