@@ -1,6 +1,6 @@
 <script>
   import Button from "$lib/Button.svelte";
-  import { addToCart, cart } from "$lib/stores/cartStore.js";
+  import { addToCart } from "$lib/stores/cartStore.js";
   import Modal from "$lib/Modal.svelte";
 
   export let thumbnail = "https://via.placeholder.com/500x400";

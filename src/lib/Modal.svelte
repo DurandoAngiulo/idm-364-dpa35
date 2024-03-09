@@ -1,4 +1,3 @@
-<!-- Modal.svelte -->
 <script>
   export let message;
   export let closeModal;

@@ -2,28 +2,6 @@ import { slugify } from "$lib/utils";
 import { db } from "$lib/firebase/firebase.js";
 import { collection, doc, getDocs } from "firebase/firestore";
 
-// export function load() {
-//   return {
-//     plants: plants.map((plant) => ({
-//       id: plant.id,
-//       category: plant.category,
-//       name: plant.plantName,
-//       heroMessage: plant.heroMessage,
-//       slug: slugify(plant.plantName),
-//       price: plant.price,
-//       watering: plant.watering,
-//       sunlight: plant.sunlight,
-//       temperature: plant.temperature,
-//       soilType: plant.soilType,
-//       thumbnail: plant.thumbnail,
-//       productHeaderM: plant.productHeaderM,
-//       productHeaderT: plant.productHeaderT,
-//       productHeaderD: plant.productHeaderD,
-//       productPng: plant.productPng
-//     }))
-//   };
-// }
-
 export async function load() {
   const plantsCollection = collection(db, "plants");
   const querySnapshot = await getDocs(plantsCollection);

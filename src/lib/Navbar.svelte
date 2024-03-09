@@ -32,11 +32,11 @@
     <div class="desktop-nav flex">
       <div class="mr-10">
         <a href="/browse" class="dark-brown navlink mr-5 text-lg">Browse</a>
-        <a href="/about" class="dark-brown navlink text-lg">About</a>
+        <!-- <a href="/about" class="dark-brown navlink text-lg">About</a> -->
       </div>
 
       <div class="flex justify-between">
-        <img src={searchNav} alt="search" class="h-8 w-8" />
+        <!-- <img src={searchNav} alt="search" class="h-8 w-8" /> -->
         <a href="/cart">
           <div class="relative">
             <img src={cartImage} alt="cart" class="h-8 w-8 ml-2" />
@@ -49,7 +49,7 @@
             {/if}
           </div>
         </a>
-        <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
+        <!-- <img src={profile} alt="profile" class="h-8 w-8 ml-2" /> -->
       </div>
     </div>
 
@@ -61,11 +61,11 @@
       {#if isMenuOpen}
         <div class="absolute top-13 right-0 p-4 space-y-4 w-full mobileNavBg">
           <a href="/browse" class="dark-brown block navlink">Browse</a>
-          <a href="/about" class="dark-brown block navlink">About</a>
+          <!-- <a href="/about" class="dark-brown block navlink">About</a> -->
           <div class="flex w-3/12 justify-between">
-            <img src={searchNav} alt="search" class="h-8 w-8" />
+            <!-- <img src={searchNav} alt="search" class="h-8 w-8" /> -->
             <a href="/cart"><img src={cartImage} alt="cart" class="h-8 w-8 ml-2" /></a>
-            <img src={profile} alt="profile" class="h-8 w-8 ml-2" />
+            <!-- <img src={profile} alt="profile" class="h-8 w-8 ml-2" /> -->
           </div>
         </div>
       {/if}

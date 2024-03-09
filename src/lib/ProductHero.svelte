@@ -30,7 +30,6 @@
   }
 
   onMount(() => {
-    // Initial width
     updateWidth();
     if (browser) {
       window.addEventListener("resize", updateWidth);

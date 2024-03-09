@@ -1,4 +1,3 @@
-<!-- QuantityButtonCart.svelte -->
 <script>
   export let quantity;
   export let addQuantityToCart;

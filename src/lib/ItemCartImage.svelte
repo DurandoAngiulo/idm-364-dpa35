@@ -1,4 +1,3 @@
-<!-- ItemCartPreview.svelte -->
 <script>
   export let image;
 </script>

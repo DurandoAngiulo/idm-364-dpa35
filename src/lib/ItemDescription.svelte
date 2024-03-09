@@ -1,4 +1,3 @@
-<!-- ItemDescription.svelte -->
 <script>
   import { onMount } from "svelte";
   import QuantityButton from "$lib/QuantityButton.svelte";

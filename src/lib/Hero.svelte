@@ -1,7 +1,4 @@
 <script>
-  import homeHeaderImageMobile from "$lib/dist/images/homeHeader-mobile.jpg";
-  import homeHeaderImageTablet from "$lib/dist/images/homeHeader-tablet.jpg";
-  import homeHeaderImageDesktop from "$lib/dist/images/homeHeader-desktop.jpg";
   import search from "$lib/dist/svgs/search.png";
 
   const mobile = "$lib/dist/images/homeHeader-mobile.jpg";
@@ -17,32 +14,15 @@
       low-maintenance garden is only a couple clicks away!
     </p>
   </div>
-  <div
+  <!-- <div
     class=" mid-cream-bg flex content-center justify-between mb-3 px-2 h-10 rounded-lg w-full sm:w-7/12 md:w-5/12 lg:w-4/12"
   >
     <input class="searchInput self-center h-7 rounded-md w-9/12" />
     <div class="flex flex-wrap content-center justify-center brown-grey-bg mt-1.5 ml-1.5 mb-1.5 p-2 rounded-md">
       <img class="searchIcon" src={search} />
     </div>
-  </div>
+  </div> -->
 </div>
-
-<!-- <picture>
-        <source media="(min-width: 0px)" srcset={homeHeaderImageMobile} />
-        <source media="(min-width: 640px)" srcset={homeHeaderImageTablet} />
-        <source media="(min-width: 1024px)" srcset={homeHeaderImageTablet} />
-        <img class="" src={homeHeaderImageDesktop} alt="Kami" />
-      </picture> -->
-<!-- <img
-        srcset="
-            {homeHeaderImageMobile} 375w,
-            {homeHeaderImageTablet} 768w,
-            {homeHeaderImageDesktop} 1200w
-          "
-        sizes="(max-width: 375px) 100vw, (max-width: 768px) 100vw, 1200px"
-        src={homeHeaderImageMobile}
-        alt="hero"
-      /> -->
 
 <style>
   .heroBackground {
