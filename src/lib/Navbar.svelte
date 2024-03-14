@@ -3,15 +3,16 @@
   import searchNav from "$lib/dist/svgs/search-nav.png";
   import cartImage from "$lib/dist/svgs/cart.png";
   import profile from "$lib/dist/svgs/profile.png";
-  import { cart } from "$lib/stores/cartStore.js";
+  import { cartCount } from "$lib/stores/cartStore.js";
   import { writable } from "svelte/store";
 
   let isMenuOpen = false;
-  let cartCount = writable(0);
+  let cartQuantity = writable(0);
 
   $: {
-    let items = $cart;
-    cartCount.set(items.length);
+    cartCount.subscribe((value) => {
+      cartQuantity.set(value);
+    });
   }
 
   const toggleMenu = () => {
@@ -40,11 +41,11 @@
         <a href="/cart">
           <div class="relative">
             <img src={cartImage} alt="cart" class="h-8 w-8 ml-2" />
-            {#if $cart.length > 0}
+            {#if $cartQuantity > 0}
               <div
                 class="absolute top-0 left-8 h-4 w-4 bg-lime-800 text-white rounded-full flex items-center justify-center text-xs"
               >
-                {$cart.length}
+                {$cartQuantity}
               </div>
             {/if}
           </div>

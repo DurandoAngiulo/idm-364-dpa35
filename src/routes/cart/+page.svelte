@@ -9,10 +9,12 @@
   $: total = (Number(subtotal) + Number(tax)).toFixed(2);
 </script>
 
-<h1>Your Cart</h1>
-<div class="md:flex md:justify-between">
-  <CartItems bind:subtotal />
-  <CartTotal {total} {tax} {subtotal} />
+<div class="max-w-screen-xl mx-auto">
+  <h1>Your Cart</h1>
+  <div class="md:flex md:justify-between">
+    <CartItems bind:subtotal />
+    <CartTotal {total} {tax} {subtotal} />
+  </div>
 </div>
 
 <style></style>

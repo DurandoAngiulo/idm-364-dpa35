@@ -1,4 +1,3 @@
-<!-- Home.svelte -->
 <script>
   import Hero from "$lib/Hero.svelte";
   import HeaderNav from "$lib/HeaderNav.svelte";
@@ -36,11 +35,14 @@
 <Hero />
 <HeaderNav bind:selectedFilter={$filter} selectedFilterChange={handleFilterChange} />
 
-<div class="flex flex-wrap justify-center mb-10">
-  <div class="flex flex-wrap justify-center xl:w-9/12">
-    {#each filteredPlants as { name, slug, price, thumbnail, id }}
-      <PlantCard {name} {slug} {price} {thumbnail} {id} />
-    {/each}
+<div class="max-w-screen-xl mx-auto">
+  <div class="flex flex-wrap justify-center mb-10">
+    <div class="flex flex-wrap justify-center xl:w-9/12">
+      {#each filteredPlants as { name, slug, price, thumbnail, id }}
+        <PlantCard {name} {slug} {price} {thumbnail} {id} />
+      {/each}
+    </div>
   </div>
 </div>
+
 <MissionStatement />

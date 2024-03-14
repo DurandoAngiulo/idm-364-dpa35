@@ -22,27 +22,29 @@
   } = data.plant;
 </script>
 
-<ProductHero
-  name={plantName}
-  heroMsg={heroMessage}
-  desktopBg={productHeaderD}
-  tabletBg={productHeaderT}
-  mobileBg={productHeaderM}
-/>
-<h2 class="text-center my-8 text-lg sm:text-2xl lg:text-4xl">
-  Is This Plant right for <span class="primary-green font-semibold">You?</span>
-</h2>
-<div class="flex justify-center">
-  <div
-    class=" grid grid-cols-2 justify-items-center gap-4 sm:gap-8 sm:w-9/12 lg:grid-cols-4 lg:gap-x-10 lg:w-full xl:w-11/12"
-  >
-    <DataCard type="water" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
-    <DataCard type="sunlight" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
-    <DataCard type="temperature" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
-    <DataCard type="soil" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
+<div class="max-w-screen-xl mx-auto">
+  <ProductHero
+    name={plantName}
+    heroMsg={heroMessage}
+    desktopBg={productHeaderD}
+    tabletBg={productHeaderT}
+    mobileBg={productHeaderM}
+  />
+  <h2 class="text-center my-8 text-lg sm:text-2xl lg:text-4xl">
+    Is This Plant right for <span class="primary-green font-semibold">You?</span>
+  </h2>
+  <div class="flex justify-center">
+    <div
+      class=" grid grid-cols-2 justify-items-center gap-4 sm:gap-8 sm:w-9/12 lg:grid-cols-4 lg:gap-x-10 lg:w-full xl:w-11/12"
+    >
+      <DataCard type="water" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
+      <DataCard type="sunlight" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
+      <DataCard type="temperature" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
+      <DataCard type="soil" waterInfo={watering} sunInfo={sunlight} tempInfo={temperature} soilInfo={soilType} />
+    </div>
   </div>
-</div>
-<div class="mt-20 sm:flex sm:justify-between">
-  <ItemCartImage image={productPng} />
-  <ItemDescription {id} {description} {price} name={plantName} {thumbnail} />
+  <div class="mt-20 sm:flex sm:justify-between">
+    <ItemCartImage image={productPng} />
+    <ItemDescription {id} {description} {price} name={plantName} {thumbnail} />
+  </div>
 </div>

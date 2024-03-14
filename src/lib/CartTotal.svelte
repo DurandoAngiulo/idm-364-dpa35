@@ -1,12 +1,16 @@
 <script>
   import Button from "$lib/Button.svelte";
   import Modal from "$lib/Modal.svelte";
+  import { removeAllItemsFromCart } from "$lib/stores/cartStore.js";
+
   export let subtotal;
   export let tax;
   export let total;
   let isModalVisible = false;
   let modalMessage = "Congratulations! You have checked out.";
+
   function handleCheckout() {
+    removeAllItemsFromCart();
     isModalVisible = true;
   }
 
